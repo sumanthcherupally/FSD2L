@@ -1,2 +1,2 @@
-# FSD2L
-This is a repository for the FSD2L, a route validation framework for the BGP protocol. Look at our paper for further details - Coming soon!
+# GO-DAG-gatewayNode
+This repository is for the gateway node of the smart meter DAG chain integration architecture.
