@@ -1,2 +1,2 @@
-# GO-DAG-gatewayNode
-This repository is for the gateway node of the smart meter DAG chain integration architecture.
+# GO-DAG-FSD2L
+This repository is for the implementation for the FS2DL system, a route verification framework for the BGP protocol. Look at our paper for more details - Coming soon!
