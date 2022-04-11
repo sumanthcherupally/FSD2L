@@ -56,6 +56,7 @@ You can use Docker containers to run multiple nodes and setup a testbed. A sampl
 - Run a discovery node on a network that can be accessible by other nodes.
 - The address of discovery node should be provided in bootstrapNodes.txt file while running the router node.
 - Now you can run any node arbitrarily to join the network of existing nodes.
+- After setting up all the router nodes run simNode to generate BGP routing messages to be published across all the network
 
 
 ## Future Development
