@@ -32,7 +32,7 @@ simulation Node generates BGP routing messages like pathAnnounceMessage, prefixA
 
 ### Building the Source 
 
-You can build the node by running :
+You can build the router node by running :
 > go build main.go 
 
 A sample DockerFile is provided in the repository to run the node in a docker container.
