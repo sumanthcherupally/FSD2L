@@ -5,9 +5,21 @@ This repository is for the implementation for the FS2DL system, a route verifica
 ## Architecture of the system
 
 ### Types of nodes 
-- Blockchain Node
+- Router Node
 - Discovery Node
 - simulation Node
+
+
+### Router Node
+The node has an RESTFUL API that accepts pathAnnounce, prefixAllocate ... etc BGP routing protocol messages and route them to other nodes in the network.
+It also generates a hash(sha256) of the BGP routing protocol message and stores it in the DAG based Blockchain as a transaction, such as other router nodes can verify the integrity of the BGP routing messages. The router nodes also run a DAG based blockchain node inspired from LSDI https://ieeexplore.ieee.org/abstract/document/9334000/.
+
+### Discovery Node
+This Node is helpful for creating the network of blockchain nodes and intial connectivity.
+
+
+### simulation Node
+simulation Node generates BGP routing messages like pathAnnounceMessage, prefixAllocateMessage at random to simulate a real world BGP network. These messsages are routed across all the router nodes in the network.
 
 
 ## Usage
@@ -20,7 +32,7 @@ This repository is for the implementation for the FS2DL system, a route verifica
 
 ### Building the Source 
 
-You can build the blockchain node by running :
+You can build the node by running :
 > go build main.go 
 
 A sample DockerFile is provided in the repository to run the node in a docker container.
@@ -33,6 +45,5 @@ To run the discovery node we need to provide port number, max nodes in a shard a
 > ./discoveryService port_number max_nodes
 
 ### Running a simNode 
-
-simulation Node generates BGP routing messages like pathAnnounceMessage, prefixAllocateMessage at random to simulate a real world BGP network. The sim Node is coded in python and can be run by
+The sim Node is coded in python and can be run by
 > python3 simNode.py
