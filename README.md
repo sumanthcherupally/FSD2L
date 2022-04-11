@@ -47,3 +47,23 @@ To run the discovery node we need to provide port number, max nodes in a shard a
 ### Running a simNode 
 The sim Node is coded in python and can be run by
 > python3 simNode.py
+
+## TestBed Setup 
+
+You can use Docker containers to run multiple nodes and setup a testbed. A sample DockerFile is provided in the repo to help you get started. Use bash scripts so that the whole process of running nodes can be automated. 
+
+### Steps of setting up a testbed
+- Run a discovery node on a network that can be accessible by other nodes.
+- The address of discovery node should be provided in bootstrapNodes.txt file while running the router node.
+- Now you can run any node arbitrarily to join the network of existing nodes.
+
+
+## Future Development
+
+To contribute to this project, fork the repo and start creating a pull request for the repository maintainers to review and merge into the main branch. 
+
+To get the documentation of all the modules use godoc feature, for example :
+> godoc -http=:6060
+ 
+The above commands generates doumentation for the entire repo, you can access the documentation by going to localhost:6060 on your browser.
+
